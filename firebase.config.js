@@ -32,4 +32,6 @@ export const db =getFirestore(app);
 
 export const usersRef=collection(db,'users');
 export const airportsRef=collection(db,'airports');
+export const flightsRef=collection(db,'flights');
+export const bookingsRef=collection(db,'bookings');
 

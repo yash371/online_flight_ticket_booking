@@ -2,9 +2,10 @@ import React from 'react'
 import {  Text, TouchableOpacity, View } from 'react-native'
 import { AntDesign } from '@expo/vector-icons';
 
-const CustomeAuthButton = ({text,style,onPress,iconFlag=true}) => {
+const CustomeAuthButton = ({text,style,onPress,iconFlag=true,disabled=false}) => {
   return (
     <TouchableOpacity 
+    disabled={disabled}
     onPress={onPress}
     style={[{
         flexDirection:'row',

@@ -3,6 +3,7 @@ import { Text, View } from 'react-native'
 import {Stack, Tabs} from 'expo-router'
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { StatusBar } from 'expo-status-bar';
+import { Entypo } from '@expo/vector-icons';
 
 export default function _layout(){
   return (
@@ -19,10 +20,11 @@ export default function _layout(){
         }}
       />
        <Tabs.Screen
-        name="transaction"
+        name="booking"
         options={{
-          title: 'Transaction',
-          tabBarIcon: ({ color }) => <FontAwesome size={28} name="money" color={color} />,
+          title: 'Bookings',
+          tabBarIcon: ({ color }) => <Entypo name="aircraft" size={24} color={color} />,
+          header:()=>""
         }}
       />
       <Tabs.Screen
@@ -30,6 +32,7 @@ export default function _layout(){
         options={{
           title: 'Account',
           tabBarIcon: ({ color }) => <FontAwesome size={28} name="user" color={color} />,
+          header:()=>""
         }}
       />
      

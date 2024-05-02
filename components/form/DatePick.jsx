@@ -17,7 +17,7 @@ const DatePick = ({value,setValue,lable}) => {
 
   const handleConfirm = (date) => {
     console.log("A date has been picked: ", date);
-    setValue(moment(date).format("MMMM D, YYYY"));
+    setValue(moment(date).format("MMMM D, YYYY"),date);
     hideDatePicker();
   };
 

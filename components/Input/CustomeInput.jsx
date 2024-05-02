@@ -6,10 +6,12 @@ const CustomeInput = ({
     cutomeStyle,
     placeholder,
     lable,
-    secureTextEntry
+    secureTextEntry,
+    style,
+    bottomBar=true
 }) => {
   return (
-    <View style={{gap:4,marginTop:20}}>
+    <View style={[{gap:4,marginTop:20},style]}>
         <Text style={{
             fontSize:14,
             color:"gray"
@@ -23,7 +25,7 @@ const CustomeInput = ({
         },cutomeStyle]}
         secureTextEntry={secureTextEntry}
     />
-    <View style={{height:2,backgroundColor:'gray',opacity:0.5}}/>
+   {bottomBar?<View style={{height:2,backgroundColor:'gray',opacity:0.5}}/>:("")}
     </View>
   )
 }
